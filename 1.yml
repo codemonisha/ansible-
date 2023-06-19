@@ -1,0 +1,12 @@
+---
+- hosts: all
+  tasks:
+   - name: install_git
+     apt:
+      name: git
+      state: present 
+   - name: copy_file
+     copy:
+       src: /home/ubuntu/1.yml
+       dest: /home/ubuntu
+         
